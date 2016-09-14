@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+  mongo:
+    image: mongo
+  node:
+    build: .
+    links:
+      - mongo
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../../:/opt/app
+      - ./script:/opt/script
+    environment:
+      - RUN_FILE=custom.sh
+    # command: |
+    #   bash -c 'bash -s <<EOF
+
+    #   npm install -g http-server
+
+    #   http-server -p 1331
+    #   EOF'
