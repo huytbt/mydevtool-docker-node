@@ -1,4 +1,4 @@
-FROM node:6.5.0
+FROM node:6.5.0-slim
 
 ENV RUN_FILE custom.sh
 
