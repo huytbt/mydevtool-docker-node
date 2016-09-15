@@ -1,4 +1,4 @@
-FROM node:6.5.0
+FROM node:wheezy
 
 ENV RUN_FILE custom.sh
 
